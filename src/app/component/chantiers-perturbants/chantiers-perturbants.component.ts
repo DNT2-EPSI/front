@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from './../../../environments/environment';
 
 @Component({
   selector: 'app-chantiers-perturbants',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChantiersPerturbantsComponent implements OnInit {
 
-  constructor() { }
+  chantiers = [];
+
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.GetAll();
+  }
+
+  GetAll() {
+    this.httpClient
+      .get<any[]>(environment.server + "chantiers-perturbants")
+      .subscribe(
+        (response) => {
+          this.chantiers = response;
+          console.log(response);
+          
+        },
+        (error) => {
+          console.log('Erreur ! : ' + error);
+        }
+      );
   }
 
 }
