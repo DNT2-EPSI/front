@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './component/index/index.component';
-import { LaDemarcheComponent } from './component/laDemarche/laDemarche.component';
-import { AProposComponent } from './component/APropos/APropos.component';
-import { QuestionComponent } from './component/question/question.component';
+import { ChantiersPerturbantsComponent } from './component/chantiers-perturbants/chantiers-perturbants.component';
+import { EclairagePublicComponent } from './component/eclairage-public/eclairage-public.component';
 
 
 const routes: Routes = [
+
   { path: '', component : IndexComponent},
-  { path: 'demarche', component : LaDemarcheComponent},
-  { path: 'aPropos', component : AProposComponent},
-  { path: 'question', component : QuestionComponent},
+  { path: 'chantiers', component : ChantiersPerturbantsComponent},
+  { path: 'eclairages', component : EclairagePublicComponent},
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

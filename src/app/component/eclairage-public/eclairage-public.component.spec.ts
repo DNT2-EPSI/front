@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AProposComponent } from './APropos.component';
+import { EclairagePublicComponent } from './eclairage-public.component';
 
-describe('AProposComponent', () => {
-  let component: AProposComponent;
-  let fixture: ComponentFixture<AProposComponent>;
+describe('EclairagePublicComponent', () => {
+  let component: EclairagePublicComponent;
+  let fixture: ComponentFixture<EclairagePublicComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AProposComponent ]
+      declarations: [ EclairagePublicComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AProposComponent);
+    fixture = TestBed.createComponent(EclairagePublicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

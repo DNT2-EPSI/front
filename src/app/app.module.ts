@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './component/index/index.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { AProposComponent } from './component/APropos/APropos.component';
-import { LaDemarcheComponent } from './component/laDemarche/laDemarche.component';
-import { QuestionComponent } from './component/question/question.component';
+import { ChantiersPerturbantsComponent } from './component/chantiers-perturbants/chantiers-perturbants.component';
+import { EclairagePublicComponent } from './component/eclairage-public/eclairage-public.component';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +16,8 @@ import { QuestionComponent } from './component/question/question.component';
     IndexComponent,
     HeaderComponent,
     FooterComponent,
-    AProposComponent,
-    LaDemarcheComponent,
-    QuestionComponent,
+    ChantiersPerturbantsComponent,
+    EclairagePublicComponent
 
   ],
   imports: [
