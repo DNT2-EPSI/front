@@ -1,0 +1,8 @@
+<div>
+  CHANTIERS :
+  <div *ngFor="let chantier of chantiers">
+    <p>{{chantier.flux_lamp}}&nbsp;
+      <button [routerLink]="['/chantier', chantier.idrecord]">- voir -</button>
+    </p>
+  </div>
+</div>

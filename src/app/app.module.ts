@@ -7,8 +7,12 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './component/index/index.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { ChantiersPerturbantsComponent } from './component/chantiers-perturbants/chantiers-perturbants.component';
-import { EclairagePublicComponent } from './component/eclairage-public/eclairage-public.component';
+import { ChantiersPerturbantsComponent } from './component/chantiers/chantiers-perturbants.component';
+import { EclairagePublicComponent } from './component/eclairages/eclairage-public.component';
+import { CentreComponent } from './component/centre/centre.component';
+import { CentresComponent } from './component/centres/centres.component';
+import { EclairageComponent } from './component/eclairage/eclairage.component';
+import { ChantierComponent } from './component/chantier/chantier.component';
 
 
 
@@ -18,8 +22,9 @@ import { EclairagePublicComponent } from './component/eclairage-public/eclairage
     IndexComponent,
     HeaderComponent,
     FooterComponent,
-    ChantiersPerturbantsComponent,
-    EclairagePublicComponent
+    ChantiersPerturbantsComponent,ChantierComponent,
+    EclairagePublicComponent,EclairageComponent,
+    CentreComponent,CentresComponent
 
   ],
   imports: [

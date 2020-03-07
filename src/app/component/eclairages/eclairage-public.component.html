@@ -1,0 +1,9 @@
+<div>
+  ECLAIRAGE
+  <div *ngFor="let eclairage of eclairages">
+    <p>{{eclairage.flux_lamp}} &nbsp;  
+    <button  [routerLink]="['/eclairage', eclairage.idrecord]">- voir -</button></p>
+   
+  </div>
+
+</div>

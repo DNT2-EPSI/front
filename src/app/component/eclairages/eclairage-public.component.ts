@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from './../../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -11,7 +11,6 @@ import { environment } from './../../../environments/environment';
 export class EclairagePublicComponent implements OnInit {
 
   eclairages = [];
-  eclairage = [];
 
   constructor(
     private httpClient: HttpClient) { }
@@ -19,7 +18,6 @@ export class EclairagePublicComponent implements OnInit {
   ngOnInit() {
     this.GetAll();
   }
-
 
   GetAll() {
     this.httpClient
@@ -34,17 +32,5 @@ export class EclairagePublicComponent implements OnInit {
       );
   }
 
-  GetOneById(ID : string) {
-    this.httpClient
-      .get<any[]>(environment.server + "eclairage-public/" + ID)
-      .subscribe(
-        (response) => {
-          this.eclairage = response;
-        },
-        (error) => {
-          console.log('Erreur ! : ' + error);
-        }
-      );
-  }
 
 }

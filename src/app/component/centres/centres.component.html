@@ -1,0 +1,8 @@
+<div>
+  LES CENTRES :
+  <div *ngFor="let centre of centres">
+    <p>{{centre.center_name}}&nbsp;
+    <button  [routerLink]="['/centre', centre.idrecord]">- voir -</button>
+  </p>
+  </div>
+</div>
