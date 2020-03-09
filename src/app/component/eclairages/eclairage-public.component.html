@@ -1,9 +1,27 @@
-<div>
-  ECLAIRAGE
-  <div *ngFor="let eclairage of eclairages">
-    <p>{{eclairage.flux_lamp}} &nbsp;  
-    <button  [routerLink]="['/eclairage', eclairage.idrecord]">- voir -</button></p>
-   
+<div class="clearfix"></div>
+<section class="search-box">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 listing-block">
+        <div *ngFor="let eclairage of eclairages" class="media">
+          <img class="d-flex align-self-start"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSiTSXsuP1ZQEbFwyjli86G8q_W44f2H_KHqReJ9lqpInIsR9Vo"
+            alt="Generic placeholder image">
+          <div class="media-body pl-3">
+            <div class="price">
+              {{eclairage.arrondissement}}
+              <small><i class="fas fa-home text-primary"></i>
+                Rue {{eclairage.rue}}&nbsp;- {{eclairage.voie}}</small></div>
+            <div class="stats">
+              <span><i class="fas fa-map-marker-alt text-danger"></i>Latitude :&nbsp;{{eclairage.latitude}} - Longitude
+                :&nbsp;{{eclairage.longitude}}</span>
+            </div>
+            <div class="address">
+              <i class="far fa-lightbulb text-warning"></i> Type d'éclairage : {{eclairage.content}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-</div>
+</section>
