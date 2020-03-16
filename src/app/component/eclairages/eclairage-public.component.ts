@@ -25,6 +25,8 @@ export class EclairagePublicComponent implements OnInit {
       .subscribe(
         (response) => {
           this.eclairages = response;
+          console.log(response);
+          
         },
         (error) => {
           console.log('Erreur ! : ' + error);

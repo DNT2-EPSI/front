@@ -1,3 +1,27 @@
-<div>
-  CHANTIER : {{ chantier["flux_lamp"]}}
+<div class="data">
+  <span class="data-title"> But du Chantier : {{chantier["objet"]}} </span> <br>
+  
+  <div class="item">
+    <span class="data-subtitle"> Identificants </span> <br>
+    ID : {{chantier["id"]}}  <br>
+    IDrecord : {{chantier["idrecord"]}} <br>
+  </div>
+
+  <div class="item"> 
+    <span class="data-subtitle"> Adresse </span> <br>
+    Lieu : {{chantier["maitre_ouvrage"]}} <br>
+    Code Postal : {{chantier["arrondissement"]}} <br>
+  </div>
+  
+  <div class="item"> 
+    <span class="data-subtitle"> Informations Chantier </span> <br>
+    Début du Chantier : {{chantier["date_start"]}} <br>
+    Fin du Chantier : {{chantier["date_end"]}} <br>
+  </div>
+  
+  <div class="item"> 
+    <span class="data-subtitle"> Coordonnées GPS </span> <br>
+    Latitude : {{chantier["latitude"]}} <br>
+    Longitude : {{chantier["longitude"]}} <br>
+  </div>
 </div>

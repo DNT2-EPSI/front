@@ -1,3 +1,26 @@
-<div>
-  ECLAIRAGE : {{eclairage["flux_lamp"]}}
+<div class="data">
+  <span class="data-title"> Lieu de l'éclairage : {{eclairage["arrondissement"]}} </span> <br>
+  
+  <div class="item">
+    <span class="data-subtitle"> Identificants </span> <br>
+    ID : {{eclairage["id"]}}  <br>
+    IDrecord : {{eclairage["idrecord"]}} <br>
+  </div>
+
+  <div class="item"> 
+    <span class="data-subtitle"> Adresse </span> <br>
+    Rue : {{eclairage["rue"]}} <br>
+    Voie : {{eclairage["voie"]}} <br>
+  </div>
+  
+  <div class="item"> 
+    <span class="data-subtitle"> Informations Eclairage </span> <br>
+    Flux de la Lampe : {{eclairage["flux_lamp"]}} <br>
+  </div>
+
+  <div class="item"> 
+    <span class="data-subtitle"> Coordonnées GPS </span> <br>
+    Latitude : {{eclairage["latitude"]}} <br>
+    Longitude : {{eclairage["longitude"]}} <br>
+  </div>
 </div>
