@@ -1,9 +1,17 @@
-<div>
-  ECLAIRAGE
-  <div *ngFor="let eclairage of eclairages">
-    <p>{{eclairage.flux_lamp}} &nbsp;  
-    <button  [routerLink]="['/eclairage', eclairage.idrecord]">- voir -</button></p>
-   
-  </div>
+<h2>LES DONNNES DES ECLAIRAGES PUBLIC</h2>
 
+<div class ="item-container">
+  <div class="item" *ngFor="let eclairage of eclairages">
+    <div class="item-header">
+      <img class="item-logo" src="../../../assets/img/eclairage/logo-eclairage-public.png" alt="logo-eclairage-public">
+      <div class="item-header-title">
+       <span class="item-title">ECLAIRAGE</span>
+       <a class="item-subtitle" [routerLink]="['/eclairage', eclairage.idrecord]">{{eclairage.arrondissement}}</a>
+      </div>
+    </div>
+    <p>descripton</p>
+  </div>
+</div>
+<div class="action">
+  <button type="button" class="btn btn-primary">Télécharger CSV</button>
 </div>

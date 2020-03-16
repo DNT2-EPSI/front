@@ -1,8 +1,17 @@
-<div>
-  LES CENTRES :
-  <div *ngFor="let centre of centres">
-    <p>{{centre.center_name}}&nbsp;
-    <button  [routerLink]="['/centre', centre.idrecord]">- voir -</button>
-  </p>
+<h2 class='title'>Les donneées des centres</h2>
+
+<div class ="item-container">
+  <div class="item" *ngFor="let centre of centres">
+    <div class="item-header">
+      <img class="item-logo" src="../../../assets/img/centres/logo-centre.jpg/" alt="logo-chantier">
+      <div class="item-header-title">
+       <span class="item-title">Centres</span>
+       <a class="item-subtitle" [routerLink]="['/centre', centre.idrecord]">{{centre.center_name}}</a>
+      </div>
+    </div>
+    <p>descripton</p>
   </div>
+</div>
+<div class="action">
+  <button type="button" class="btn btn-primary">Télécharger CSV</button>
 </div>

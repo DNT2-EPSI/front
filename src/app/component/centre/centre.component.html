@@ -1,3 +1,34 @@
-<div>
-  LE CENTRE  :  {{centre["center_name"]}}
+<div class="data">
+  <span class="data-title"> Nom du Centre : {{centre["center_name"]}} </span> <br>
+  
+  <div class="item">
+    <span class="data-subtitle"> Identificants </span> <br>
+    ID : {{centre["id"]}}  <br>
+    IDrecord : {{centre["idrecord"]}} <br>
+  </div>
+
+  <div class="item">
+    <span class="data-subtitle"> Compétences </span> <br>
+    Specialité : {{centre["speciality"]}} <br>
+    Type : {{centre["content"]}} <br>
+    Nom de l'Activité : {{centre["activityName"]}} <br>
+  </div>
+
+  <div class="item"> 
+    <span class="data-subtitle"> Contact </span> <br>
+    Adresse : {{centre["address"]}} <br>
+    Téléphone : {{centre["phoneNumber"]}} <br>
+  </div>
+  
+  <div class="item"> 
+    <span class="data-subtitle"> Horaires </span> <br>
+    Heure d'Ouverture : {{centre["startTime"]}} <br>
+    Heure de Fermeture : {{centre["endTime"]}} <br>
+  </div>
+  
+  <div class="item"> 
+    <span class="data-subtitle"> Coordonnées GPS </span> <br>
+    Latitude : {{centre["latitude"]}} <br>
+    Longitude : {{centre["longitude"]}} <br>
+  </div>
 </div>

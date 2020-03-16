@@ -1,8 +1,17 @@
-<div>
-  CHANTIERS :
-  <div *ngFor="let chantier of chantiers">
-    <p>{{chantier.flux_lamp}}&nbsp;
-      <button [routerLink]="['/chantier', chantier.idrecord]">- voir -</button>
-    </p>
+<h2>Les donneées des chantiers</h2>
+
+<div class ="item-container">
+  <div class="item" *ngFor="let chantier of chantiers">
+    <div class="item-header">
+      <img class="item-logo" src="../../../assets/img/chantiers/logo-chantier.png" alt="logo-chantier">
+      <div class="item-header-title">
+       <span class="item-title">Chantier</span>
+       <a class="item-subtitle" [routerLink]="['/chantier', chantier.idrecord]">{{chantier.content}}</a>
+      </div>
+    </div>
+    <p>descripton</p>
   </div>
+</div>
+<div class="action">
+  <button type="button" class="btn btn-primary">Télécharger CSV</button>
 </div>

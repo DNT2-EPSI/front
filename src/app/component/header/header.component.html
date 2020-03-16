@@ -1,24 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" [routerLink]="['/']">Acceuil</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/chantiers']" >Chantiers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/eclairages']" >Eclairages</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/centres']" >Centres</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+<nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" [routerLink]="['/']">
+      <img src="../../../assets/img/acceuil/Logo.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" [routerLink]="['/chantiers']" >Chantiers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" [routerLink]="['/eclairages']" >Eclairage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" [routerLink]="['/centres']" >Centres</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
