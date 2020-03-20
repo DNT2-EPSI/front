@@ -10,6 +10,7 @@ import { environment } from '../../../environments/environment';
 export class ChantiersPerturbantsComponent implements OnInit {
 
   chantiers = [];
+  objets : Array<string>;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -24,7 +25,6 @@ export class ChantiersPerturbantsComponent implements OnInit {
         (response) => {
           this.chantiers = response;
           console.log(response);
-          
         },
         (error) => {
           console.log('Erreur ! : ' + error);

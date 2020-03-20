@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './component/index/index.component';
 import { HeaderComponent } from './component/header/header.component';
-import { FooterComponent } from './component/footer/footer.component';
 import { ChantiersPerturbantsComponent } from './component/chantiers/chantiers-perturbants.component';
 import { EclairagePublicComponent } from './component/eclairages/eclairage-public.component';
 import { CentreComponent } from './component/centre/centre.component';
@@ -21,7 +20,6 @@ import { ChantierComponent } from './component/chantier/chantier.component';
     AppComponent,
     IndexComponent,
     HeaderComponent,
-    FooterComponent,
     ChantiersPerturbantsComponent,ChantierComponent,
     EclairagePublicComponent,EclairageComponent,
     CentreComponent,CentresComponent
