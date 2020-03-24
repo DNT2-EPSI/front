@@ -33,23 +33,41 @@ export class EclairagePublicComponent implements OnInit {
       );
   }
 
-  downloadFile() {
-    var data = this.eclairages ;
-    const replacer = (key, value) => value === null ? '' : value; // specify how you want to handle null values here
-    const header = Object.keys(data[0]);
-    let csv = data.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','));
-    csv.unshift(header.join(','));
-    let csvArray = csv.join('\r\n');
-
-    var a = document.createElement('a');
-    var blob = new Blob([csvArray], {type: 'text/csv' }),
-    url = window.URL.createObjectURL(blob);
-
+  downloadButtonPush() {
+    var csvData = this.ConvertToCSV();
+    var a = document.createElement("a");
+    a.setAttribute('style', 'display:none;');
+    document.body.appendChild(a);
+    var blob = new Blob([csvData], { type: 'text/csv' });
+    var url = window.URL.createObjectURL(blob);
     a.href = url;
-    a.download = "myFile.csv";
+    a.download = 'Eclairages.csv';
     a.click();
-    window.URL.revokeObjectURL(url);
-    a.remove();
+}
+
+ConvertToCSV(): string {
+    var array = JSON.parse(JSON.stringify(this.eclairages));
+    var str = '';
+    var row = "";
+
+    for (var index in this.eclairages[0]) {
+        //Now convert each value to string and comma-separated
+        row += index + ',';
+    }
+    row = row.slice(0, -1);
+    //append Label row with line break
+    str += row + '\r\n';
+
+    for (var i = 0; i < array.length; i++) {
+        var line = '';
+        for (var index in array[i]) {
+            if (line != '') line += ','
+
+            line += array[i][index];
+        }
+        str += line + '\r\n';
+    }
+    return str;
 }
 
 }
