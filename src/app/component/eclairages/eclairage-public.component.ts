@@ -34,15 +34,19 @@ export class EclairagePublicComponent implements OnInit {
   }
 
   downloadButtonPush() {
+    console.log("Lancement de l'import");
     var csvData = this.ConvertToCSV();
     var a = document.createElement("a");
     a.setAttribute('style', 'display:none;');
     document.body.appendChild(a);
     var blob = new Blob([csvData], { type: 'text/csv' });
     var url = window.URL.createObjectURL(blob);
+    console.log("Import en cours");
     a.href = url;
     a.download = 'Eclairages.csv';
     a.click();
+    console.log("Import finis");
+
 }
 
 ConvertToCSV(): string {
